@@ -41,6 +41,7 @@
   box-sizing: border-box; }
 
 html {
+  scroll-behavior: smooth;
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -9137,8 +9138,8 @@ textarea.form-control {
       padding-bottom: 5em; } }
 
 .ftco-animate {
-  opacity: 0;
-  visibility: hidden; }
+  opacity: 1;
+  visibility: visible; }
 
 .bg-primary {
   background: #f15d30 !important; }
