@@ -268,6 +268,53 @@
 
 
 
+	$(document).ready(function() {
+		// Add smooth scrolling to all links
+		$("a").on('click', function(event) {
+			if (this.hash !== "") {
+				event.preventDefault();
+	
+				var hash = this.hash;
+	
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function() {
+					window.location.hash = hash;
+				});
+			}
+		});
+	
+		// Add active class to navbar links based on scroll position
+		$(window).scroll(function() {
+			var scrollDistance = $(window).scrollTop();
+	
+			// Assign active class to nav links while scrolling
+			$('.section').each(function(i) {
+				if ($(this).position().top <= scrollDistance) {
+					$('.navbar-nav a.active').removeClass('active');
+					$('.navbar-nav a').eq(i).addClass('active');
+				}
+			});
+		}).scroll();
+	});
 
+
+	$(document).ready(function() {
+		$('.popup-vimeo').magnificPopup({
+		  type: 'iframe',
+		  iframe: {
+			patterns: {
+			  vimeo: {
+				index: 'vimeo.com/',
+				id: 'https://vimeo.com/', // URL that will be matched. Use a variable to remove redundant IDs
+				src: 'https://player.vimeo.com/video/%id%' // URL that will be set as a source for iframe.
+			  }
+			},
+			srcAction: 'iframe_src', // Action to attribute the value of src to the iframe.
+		  }
+		});
+	  });
 })(jQuery);
+
+
 
