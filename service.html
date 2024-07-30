@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Reach Nations - Blogs</title>
+  <title>Reach Nations - Service Detail</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -23,7 +23,7 @@
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
 			<a class="navbar-brand" href="index.html">Reach Nations<span>Travel Agency</span></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,14 +58,29 @@
     <div class="container">
       <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
         <div class="col-md-9 ftco-animate pb-5 text-center">
-          <h1 class="mb-0 bread" id="blog-title">Thankyou for contating us!</h1>
-          <p id="blog-content">Our team will reach you shortly</p>
+          <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span class="mr-2">Services <i class="fa fa-chevron-right"></i></span> <span id="service-name">Service Detail <i class="fa fa-chevron-right"></i></span></p>
+          <h1 class="mb-0 bread" id="service-title">Service Detail</h1>
         </div>
       </div>
     </div>
   </section>
 
-  <br><br>
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 ftco-animate">
+          <h2 class="mb-3" id="service-title-heading">Service Title</h2>
+          <p>
+            <img src="images/image_1.jpg" alt="" class="img-fluid" id="service-image">
+          </p>
+          <p id="service-description">Service description goes here.</p>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
   <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/bg_3.jpg);">
     <div class="container">
       <div class="row mb-5">
@@ -121,7 +136,7 @@
         <div class="col-md-12 text-center">
           <p>
             Copyright &copy;
-            <script>document.write(new Date().getFullYear());</script>  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            <script>document.write(new Date().getFullYear());</script> 
           </p>
         </div>
       </div>
@@ -149,6 +164,26 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/main.js"></script>
-  
+  <script>
+    // Fetch and display single service data
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceId = urlParams.get('id');
+
+    fetch('services-data.json')
+      .then(response => response.json())
+      .then(data => {
+        const service = data.find(s => s.id == serviceId);
+        if (service) {
+          document.title = service.title + ' - Service Detail';
+          document.getElementById('service-name').innerText = service.title;
+          document.getElementById('service-title').innerText = service.title;
+          document.getElementById('service-title-heading').innerText = service.title;
+          document.getElementById('service-image').src = service.image;
+          document.getElementById('service-description').innerHTML = service.description;
+        } else {
+          document.getElementById('service-description').innerHTML = '<p>Service not found.</p>';
+        }
+      });
+  </script>
 </body>
 </html>
