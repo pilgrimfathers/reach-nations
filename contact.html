@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Pacific - Free Bootstrap 4 Template by Colorlib</title>
+  <title>Contact-Reach Nations</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
@@ -24,25 +24,46 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-   <div class="container">
-     <a class="navbar-brand" href="index.html">Pacific<span>Travel Agency</span></a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="oi oi-menu"></span> Menu
-     </button>
-
-     <div class="collapse navbar-collapse" id="ftco-nav">
-       <ul class="navbar-nav ml-auto">
-         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-         <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
-         <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li>
-         <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-         <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
-       </ul>
-     </div>
-   </div>
- </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Reach Nations<span>Travel Agency</span></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+	
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Services
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="service.html?id=2">Consultation</a>
+							<a class="dropdown-item" href="service.html?id=1">Client Assistance</a>
+							<a class="dropdown-item" href="service.html?id=3">Visa Processing</a>
+							<a class="dropdown-item" href="service.html?id=4">Application Processing</a>
+						</div>
+					</li>
+                    <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Immigration Type
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="immigration.html?id=1">Skilled Immigration</a>
+							<a class="dropdown-item" href="immigration.html?id=1">Student Visa</a>
+							<a class="dropdown-item" href="immigration.html?id=3">Business Immigration</a>
+							<a class="dropdown-item" href="immigration.html?id=4">Visiting VIsa</a>
+							<a class="dropdown-item" href="immigration.html?id=5">Work Permit</a>
+						</div>
+					</li>
+					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
  <!-- END nav -->
  
  <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg');">
@@ -100,46 +121,54 @@
 </div>
 </section>
 
-<section class="ftco-section contact-section ftco-no-pt">
+<section class="ftco-section contact-section ftco-no-pt" id="contact">
   <div class="container">
+    <div class="row justify-content-center pb-4">
+      <div class="col-md-12 heading-section text-center ftco-animate">
+        <span class="subheading">Our Team Is Ready For You</span>
+        <h2 class="mb-4">Contact Us</h2>
+      </div>
+    </div>
     <div class="row block-9">
       <div class="col-md-6 order-md-last d-flex">
-        <form action="#" class="bg-light p-5 contact-form">
+        <form action="https://api.staticforms.xyz/submit" method="post" class="bg-light p-5 contact-form">
+          <input type="hidden" name="accessKey" value="275826d1-1c4f-471e-96c6-9d3549caf826">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Name">
+            <input type="text" class="form-control" placeholder="Your Name" name="name" required>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Email">
+            <input type="email" class="form-control" placeholder="Your Email" name="email" required>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Subject">
+            <input type="text" class="form-control" placeholder="Subject" name="subject" required>
           </div>
           <div class="form-group">
-            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+            <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
           </div>
+          <input type="hidden" name="redirectTo" value="https://pilgrimfathers.github.io/reach-nations/success.html">
           <div class="form-group">
-            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+            <input type="submit" value="Submit" class="btn btn-primary py-3 px-5">
           </div>
         </form>
-        
       </div>
-
-      <div class="col-md-6 d-flex">
-       <div id="map" class="bg-white"></div>
+  
+    <div class="col-md-6 d-flex">
+     <div id="map" class="bg-white">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3501.3388072597136!2d77.11412427550138!3d28.64957237565546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM4JzU4LjUiTiA3N8KwMDcnMDAuMSJF!5e0!3m2!1sen!2sin!4v1721316256466!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     </div>
      </div>
    </div>
- </div>
-</section>
-
+   </div>
+  </section>
 <section class="ftco-intro ftco-section ftco-no-pt">
  <div class="container">
   <div class="row justify-content-center">
    <div class="col-md-12 text-center">
     <div class="img"  style="background-image: url(images/bg_2.jpg);">
      <div class="overlay"></div>
-     <h2>We Are Pacific A Travel Agency</h2>
-     <p>We can manage your dream building A small river named Duden flows by their place</p>
-     <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+     <h2>We Are Reach Nations Travel Agency</h2>
+     <p>Ready for you</p>
+     <p class="mb-0"><a href="about.html" class="btn btn-primary px-4 py-3">About Us</a></p>
    </div>
  </div>
 </div>
@@ -203,9 +232,9 @@
  <div class="row">
   <div class="col-md-12 text-center">
 
-    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+    <p>
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
+      </p>
     </div>
   </div>
 </div>
@@ -230,7 +259,6 @@
 <script src="js/bootstrap-datepicker.js"></script>
 <script src="js/scrollax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
 
 </body>
