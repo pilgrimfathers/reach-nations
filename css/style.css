@@ -10198,3 +10198,22 @@ textarea.form-control {
     padding: 8px;
   }
 }
+.navbar-brand img {
+	height: 90px; /* Adjust height as needed */
+	margin-right: -10px; /* Space between the logo and the text */
+	display: inline-block; /* Ensure the logo is inline with the text */
+	vertical-align: middle; /* Align vertically with the text */
+}
+.navbar-brand span{
+  margin-left: 85px;
+  margin-top: -30px;
+}
+.navbar-brand{
+  margin-left: -100px;
+}
+@media (max-width:768px)
+{
+  .navbar-brand{
+    margin-left: 2px;
+  }
+}
