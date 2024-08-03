@@ -10208,9 +10208,6 @@ textarea.form-control {
   margin-left: 85px;
   margin-top: -30px;
 }
-.navbar-brand{
-  margin-left: -100px;
-}
 @media (max-width:768px)
 {
   .navbar-brand{
